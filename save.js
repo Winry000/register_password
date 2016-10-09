@@ -1,0 +1,14 @@
+var userid = localStorage.getItem('userid');
+var email = localStorage.getItem('email');
+var password = localStorage.getItem('password');
+var security1 = localStorage.getItem('security1');
+var security2 = localStorage.getItem('security2');
+var mobile = localStorage.getItem('mobile');
+var comment = localStorage.getItem('comment');
+document.getElementById("userid").innerHTML = userid;
+document.getElementById("email").innerHTML = email;
+document.getElementById("password").innerHTML = password;
+document.getElementById("security1").innerHTML = security1;
+document.getElementById("security2").innerHTML = security2;
+document.getElementById("mobile").innerHTML = mobile;
+document.getElementById("comment").innerHTML = comment;

@@ -1,0 +1,113 @@
+<!DOCTYPE <html>
+	<head>
+		<meta charset="utf-8">
+		<title>Register</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+	</head>
+	<body>
+		<h1 id="title">Registration</h1>
+		<hr>
+		<form id="form_id" method="post" name="login">
+		  <div class="register">
+		     <div>
+		        <label class="text">UserID:</label>
+			 	<input class="item" id="userid" type="text" name="username" value="" style="width: 180px">
+			 </div>
+			 <div>
+				 <label class="text">Password:</label>
+				 <input class="item" id="password" type="password" name="password" value="" onkeyup="passwordStrength(this.value)">
+			 </div>
+			     <p class="len" id="notice1"></p>
+
+			  <div id="pswd_info">
+				<h4>Password Strength:</h4>
+				<ul>
+				    <li id="capital" class="cancel">1 upper-case letter</li>
+				    <li id="letter" class="cancel">1 lower-case letter</li>
+				    <li id="number" class="cancel">1 number</li>
+				    <li id="Character" class="cancel">Use only these English characters: A-z, 0-9, @, -, _, and.</li>
+				    <li id="same" class="cancel">your password cannot be same as your ID</li>
+				</ul>
+			</div>
+			<div>
+				<span class="progress" id="passwordstrength"> </span>
+				<progress id="progressbar" style="width:20%" value=“0” max="5"></progress>
+				
+			</div>
+
+			 <div>
+				 <label class="text">Verify Password:</label>
+				 <input class="item" type="password" name="password" value=""><br />
+			 </div>
+			 <div>
+				 <label class="text">Email Address:</label>
+				 <input class="item" id="email" type="email" name="emailaddress" required /><br />
+			 </div>
+			 <div>
+				 <label class="text">Verify Email Address:</label>
+				 <input class="item" type="email" name="emailaddress" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}"><br />
+			 </div>
+			 <div>
+			 	<label class="text">Security Question</label> 
+				 <select class="item">
+					<option value="q1">Sum of 2+3=</option>
+					<option value="q2">Sum of 100＋200＝</option>
+					<option value="q3">23*100＝</option>
+					<option value="q4">Capital of India?</option>
+					<option value="q4">Capital of USA?</option>
+				 </select>
+			 </div>
+
+			 <div>
+				 <label class="text">Security Answer:</label>
+				 <input class="item" id="security1" type="text" name="sanswer" value="" placeholder="security question1">
+			</div>
+			  
+			 <div>
+			 	 <label class="text">Security Question</label> 
+				 <select class="item">
+					<option value="q1">Sum of 2+3=</option>
+					<option value="q2">Sum of 100＋200＝</option>
+					<option value="q3">23*100＝</option>
+					<option value="q4">Capital of India?</option>
+					<option value="q4">Capital of USA?</option>
+				 </select>
+			 </div>
+
+			 <div>
+				 <label class="text">Security Answer:</label>
+				 <input class="item" id="security2" type="text" name="sanswer" value="" placeholder="security question2">
+			 </div>
+
+			 <div>
+				 <label class="text">Mobile:</label>
+				 <input class="item" id="tel" type="tel" name="tel" value="" required />
+			 </div>
+
+			 <div class="row">
+		         <div class="col-sm-2">
+			         <label class="text">Comments:</label>
+		         </div>
+		         <div class="col-sm-10">
+		         <textarea rows="4" cols="50" id="comment"
+		         name="comment"  style="overflow: scroll;margin-left: 48px"></textarea>
+		     	 </div>
+	         </div>
+	         <p class="tes">Areas you may be interested in, please select one or more</p>
+	         <div class="row">
+		         <div class="col-sm-2">
+			     </div>
+		         <div class="col-sm-10">
+			         <textarea rows="4" cols="50" name="comment"  style="overflow: scroll; margin-left: 48px"></textarea>
+		     	 </div>
+	         </div>
+	     </form>
+	     	<div >
+		         <button name="Register" value="OK" type="button" id="button" onclick="save_settings()">Register</button>
+	             <button name="Cancel" value="OK" type="button" id="button" onclick="resetForm(this.form);">Cancel</button>
+          	</div>
+        <script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+		<script src="main.js"></script>
+	</body>
+</html>
