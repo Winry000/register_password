@@ -96,3 +96,22 @@ textarea {
     margin-top: 20px;
     margin-left: 255px;
 }
+/*
+Drop and drag model
+*/
+#dra {
+    margin-left:200px;
+}
+#div1 {
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+#div2 {
+    float: left;
+    width: 110px;
+    height: 110px;
+    margin: 10px;
+    border: 1px solid black;
+}
