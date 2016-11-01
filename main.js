@@ -111,34 +111,38 @@ function resetForm(form) {
     }
     
 }
+
 function save_settings(){
-	window.location = "./save.html"
-	localStorage.setItem("userid", $("#userid").val()); 
-	localStorage.setItem("password", $("#password").val()); 
-	localStorage.setItem("email", $("#email").val());
-	localStorage.setItem("security1", $("#security1").val());
-	localStorage.setItem("security2", $("#security2").val());
-	localStorage.setItem("mobile", $("#tel").val());
-	localStorage.setItem("comment", $("#comment").val());
+	var c = document.getElementById("div2").childNodes;
+	if (c[0].name == "sjsu") {
+		window.location = "./save.html"
+		localStorage.setItem("userid", $("#userid").val()); 
+		localStorage.setItem("password", $("#password").val()); 
+		localStorage.setItem("email", $("#email").val());
+		localStorage.setItem("security1", $("#security1").val());
+		localStorage.setItem("security2", $("#security2").val());
+		localStorage.setItem("mobile", $("#tel").val());
+		localStorage.setItem("comment", $("#comment").val());
+	}
+	else {
+		alert("You select wrong picture!")
+	}
 }
 
 //drag and drop
+var dragID;
 function allowDrop(ev) {
     ev.preventDefault();
 }
-
 function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
+	dragID = ev.target.id;
+	document.getElementById("div2").innerHTML = "";
 }
 
 function drop(ev) {
+    var nodeCopy = document.getElementById(dragID).cloneNode(false);
+	ev.target.appendChild(nodeCopy);	
     ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    var nodeCopy = document.getElementById(data).cloneNode(true);
-    nodeCopy.id = "newId"; 
-    ev.target.appendChild(nodeCopy);
-    // ev.target.removeChild(ev.target.childNodes[0]);
-    // ev.target.appendChild(document.getElementById(data));
 }
 
 
